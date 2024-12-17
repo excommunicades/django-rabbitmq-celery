@@ -16,7 +16,7 @@ channel.basic_publish(
     properties=pika.BasicProperties(
         delivery_mode=2,
     )
-)
+) # send message to queue
 
 print(f"Sent message: {message}")
 

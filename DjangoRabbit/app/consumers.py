@@ -12,7 +12,7 @@ def callback(ch, method, properties, body):
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
-channel.basic_consume(queue='order-queue', on_message_callback=callback, auto_ack=False)
+channel.basic_consume(queue='order-queue', on_message_callback=callback, auto_ack=False) # takes message from queue
 
 print('Waiting for the message...')
 
