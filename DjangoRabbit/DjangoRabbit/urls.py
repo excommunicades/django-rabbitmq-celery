@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from app.views import (
+    test_celery,
+)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test-celery/', test_celery, name='test_celery'),
+
 ]
